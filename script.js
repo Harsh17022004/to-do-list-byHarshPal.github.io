@@ -1,7 +1,9 @@
 const inputbox = document.getElementById("input-box");
 const tasklist = document.getElementById("task-list");
 
-
+inputbox.addEventListener("keypress",function(event){
+    if(event.key === "Enter") addtask();
+});
 function addtask(){
     if(inputbox.value === ''){
         let li = document.createElement('li'); 
